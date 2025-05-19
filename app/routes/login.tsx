@@ -57,6 +57,12 @@ export default function Login() {
         "token",
         JSON.stringify(response.data.data.accessToken)
       );
+      localStorage.setItem(
+        "auth",
+        JSON.stringify({
+          statusLogin: true,
+        })
+      );
       navigate("/home");
     } catch (error: any) {
       if (error?.response?.status === 400) {
