@@ -59,7 +59,7 @@ export default function Login() {
       );
       navigate("/home");
     } catch (error: any) {
-      if (error?.response?.status === 500) {
+      if (error?.response?.status === 400) {
         setError("password", {
           message: "Sai thông tin đăng nhập, vui lòng kiểm tra lại",
         });
